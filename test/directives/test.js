@@ -14,7 +14,7 @@ describe('TestDirective', function() {
 
 		var compile = $compile(
 			'<test heading="{{heading}}" person="person" ' +
-			      'do-stuff="doStuff()" />'
+				'do-stuff="doStuff()" />'
 		);
 
 		render = function render() {

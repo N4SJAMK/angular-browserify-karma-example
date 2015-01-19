@@ -14,7 +14,7 @@ function TestService($q, $timeout) {
 	 *
 	 */
 	function getStuffASync() {
-		return $q(function(resolve, reject) {
+		return $q(function(resolve) {
 			$timeout(function() {
 				return resolve({ name: 'Masi', age: 25 });
 			}, 500);

@@ -4,14 +4,14 @@
  *
  */
 function TestCtrl(TestService) {
-	var scope = this;
+	var _this = this;
 
-	scope.person = {
-		'age':  12,
-		'name': 'sika',
+	_this.person = {
+		age:  12,
+		name: 'sika',
 	}
 
-	scope.doStuff = doStuff;
+	_this.doStuff = doStuff;
 
 	return activate();
 
@@ -20,7 +20,7 @@ function TestCtrl(TestService) {
 	 */
 	function activate() {
 		return TestService.getStuffASync().then(function(stuff) {
-			scope.person = stuff;
+			_this.person = stuff;
 		});
 	}
 

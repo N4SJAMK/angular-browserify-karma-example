@@ -5,7 +5,6 @@ var expect = chai.expect;
 describe('TestService', function() {
 
 	var $timeout;
-	var $rootScope;
 	var TestService;
 
 	beforeEach(module('app'));

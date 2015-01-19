@@ -3,7 +3,7 @@
 var angular = require('angular');
               require('angular-ui-router');
 
-angular.module('app', [ 'ui.router' ])
+angular.module('app', ['ui.router'])
 	.factory('TestService', require('./services/test'))
 	.controller('TestCtrl', require('./controllers/test'))
 	.directive('test', require('./directives/test'))
@@ -13,7 +13,7 @@ angular.module('app', [ 'ui.router' ])
 
 		$stateProvider
 			.state('main', {
-				'url':      '/main',
-				'template': require('./partials/test.html'),
+				url:      '/main',
+				template: require('./partials/test.html'),
 			});
 	});

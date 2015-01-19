@@ -1,0 +1,36 @@
+{
+	"preset": "airbnb",
+
+	"maximumLineLength": {
+		"value":   80,
+		"tabSize": 4
+	},
+
+	"validateIndentation": "\t",
+
+	"requireMultipleVarDecl":  null,
+	"disallowMultipleVarDecl": true,
+
+	"requireCurlyBraces": true,
+
+	"disallowTrailingComma": null,
+
+	"requireKeywordsOnNewLine": [
+		"else",
+		"catch"
+	],
+
+	"requireSpaceAfterKeywords": [
+		"else",
+		"case",
+		"return",
+		"catch",
+		"typeof"
+	],
+
+	"disallowSpaceAfterKeywords": [
+		"if",
+		"try",
+		"switch"
+	]
+}
