@@ -2,7 +2,6 @@
 
 var expect = chai.expect;
 
-
 describe('TestService', function() {
 
 	var $timeout;

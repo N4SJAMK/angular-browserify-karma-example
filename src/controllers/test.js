@@ -6,9 +6,12 @@
 function TestCtrl(TestService) {
 	var scope = this;
 
-	scope.stuff = {
-		'greeting': '...',
+	scope.person = {
+		'age':  12,
+		'name': 'sika',
 	}
+
+	scope.doStuff = doStuff;
 
 	return activate();
 
@@ -17,8 +20,16 @@ function TestCtrl(TestService) {
 	 */
 	function activate() {
 		return TestService.getStuffASync().then(function(stuff) {
-			scope.stuff = stuff;
+			scope.person = stuff;
 		});
+	}
+
+	/**
+	 *
+	 */
+	function doStuff(msg) {
+		console.log(msg);
+		console.log('TestCtrl::doStuff');
 	}
 }
 

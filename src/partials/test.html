@@ -1,3 +1,5 @@
 <div ng-controller="TestCtrl as test">
-	{{test.stuff}}
+	{{test.person}}
+	<test person="test.person" heading="{{test.person.name}}"
+	      do-stuff="test.doStuff()" />
 </div>

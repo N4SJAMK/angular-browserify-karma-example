@@ -6,6 +6,7 @@ var angular = require('angular');
 angular.module('app', [ 'ui.router' ])
 	.factory('TestService', require('./services/test'))
 	.controller('TestCtrl', require('./controllers/test'))
+	.directive('test', require('./directives/test'))
 
 	.config(function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('/main');

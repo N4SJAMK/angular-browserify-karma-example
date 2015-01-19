@@ -16,7 +16,7 @@ function TestService($q, $timeout) {
 	function getStuffASync() {
 		return $q(function(resolve, reject) {
 			$timeout(function() {
-				return resolve({ 'greeting': 'Hello World' });
+				return resolve({ name: 'Masi', age: 25 });
 			}, 500);
 		});
 	}
@@ -26,7 +26,7 @@ function TestService($q, $timeout) {
 	 */
 	function getStuffASyncNoPromise(callback) {
 		$timeout(function() {
-			return callback({ 'greeting': 'Hello World!' });
+			return callback({ name: 'Masi', age: 25 });
 		}, 500);
 	}
 }
