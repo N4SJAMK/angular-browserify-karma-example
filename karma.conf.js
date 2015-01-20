@@ -14,6 +14,6 @@ module.exports = function(config) {
 			'transform': [ 'partialify' ],
 		},
 
-		browsers: [ 'PhantomJS', 'Chrome', 'Safari' ],
+		browsers: [ 'PhantomJS' ],
 	});
 }

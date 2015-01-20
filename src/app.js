@@ -4,16 +4,20 @@ var angular = require('angular');
               require('angular-ui-router');
 
 angular.module('app', ['ui.router'])
-	.factory('TestService', require('./services/test'))
-	.controller('TestCtrl', require('./controllers/test'))
-	.directive('test', require('./directives/test'))
+
+	.factory('PersonService', require('./services/person'))
+
+	.controller('PersonView', require('./views/person'))
+
+	.directive('showPerson', require('./components/show-person'))
+	.directive('editPerson', require('./components/edit-person'))
 
 	.config(function($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise('/main');
+		$urlRouterProvider.otherwise('/person');
 
 		$stateProvider
-			.state('main', {
-				url:      '/main',
-				template: require('./partials/test.html'),
+			.state('person', {
+				url:      '/person',
+				template: require('./views/person.template.html'),
 			});
 	});
