@@ -1,8 +1,11 @@
 'use strict';
 
-var expect = chai.expect;
+var expect  = require('chai').expect;
+var angular = require('angular');
 
 describe('services/person', function() {
+	var inject = angular.mock.inject;
+	var module = angular.mock.module;
 
 	var $timeout;
 	var PersonService;
@@ -17,7 +20,6 @@ describe('services/person', function() {
 	}));
 
 	describe('#getPersonASync', function() {
-
 		it('should exist', function() {
 			expect(PersonService).to.respondTo('getPersonASync');
 		});
@@ -28,7 +30,7 @@ describe('services/person', function() {
 
 		it('should resolve to an object', function(done) {
 			PersonService.getPersonASync().then(function(person) {
-				expect(person).to.be.an('object')
+				expect(person).to.be.an('object');
 				expect(person).to.have.property('age');
 				expect(person).to.have.property('name');
 				return done();

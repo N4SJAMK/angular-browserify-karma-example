@@ -1,10 +1,12 @@
 'use strict';
 
-/* global angular: false */
-
-var expect = chai.expect;
+var expect  = require('chai').expect;
+var angular = require('angular');
 
 describe('directives/edit-person', function() {
+
+	var inject  = angular.mock.inject;
+	var module  = angular.mock.module;
 
 	var scope;
 	var render;
